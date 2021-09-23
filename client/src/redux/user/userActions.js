@@ -10,7 +10,8 @@ import {
   USER_LOGOUT,
 } from "./userTypes";
 
-const api = "http://localhost:5000";
+//const api = "http://localhost:5000";
+const api = "https://react-app-com.herokuapp.com";
 
 export const signInUser =
   ({ email, password }) =>

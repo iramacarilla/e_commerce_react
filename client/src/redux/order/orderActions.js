@@ -24,7 +24,8 @@ import {
   REMOVE_CHANGE_A_ITEM,
 } from "./orderTypes";
 
-const api = "http://localhost:5000";
+//const api = "http://localhost:5000";
+const api = "https://react-app-com.herokuapp.com";
 
 export const createOrder = (order) => async (dispatch, getState) => {
   try {

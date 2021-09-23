@@ -8,7 +8,8 @@ import {
   PRODUCT_DETAILS_SUCCESS,
 } from "./productsActionsTypes";
 
-const api = "http://localhost:5000";
+//const api = "http://localhost:5000";
+const api = "https://react-app-com.herokuapp.com";
 
 export const getProductsList = () => async (dispatch) => {
   try {

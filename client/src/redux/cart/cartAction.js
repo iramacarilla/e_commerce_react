@@ -2,8 +2,8 @@ import axios from "axios";
 import Cookie from "js-cookie";
 import { ADD_TO_CART, REMOVE_ALL, REMOVE_FROM_CART } from "./cartTypes";
 
-const api = "http://localhost:5000";
-
+//const api = "http://localhost:5000";
+const api = "https://react-app-com.herokuapp.com";
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
   try {
     const { data } = await axios.get(api + "/api/products/" + productId);
