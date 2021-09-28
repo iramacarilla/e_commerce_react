@@ -10,6 +10,7 @@ import OrderSuccessPage from "../pages/OrderSuccessPage";
 import ProductPage from "../pages/ProductPage";
 import RegistrationPage from "../pages/RegistrationPage";
 import Header from "./header/Header";
+import "../index.css";
 
 const App = () => {
   return (
