@@ -3,7 +3,7 @@ import ProductItem from "../component/productItem/ProductItem";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getProductsList } from "../redux/products/productsActions";
-import HomePageStyled from "./HomeStyled";
+//import HomePageStyled from "./HomeStyled";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -20,11 +20,11 @@ const Home = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <div className="container">
-        <HomePageStyled>
+        <ul className="product-list">
           {products?.map((item) => (
             <ProductItem key={item._id} item={item} />
           ))}
-        </HomePageStyled>
+        </ul>
       </div>
     </>
   );
