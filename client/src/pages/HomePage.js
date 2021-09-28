@@ -3,6 +3,7 @@ import ProductItem from "../component/productItem/ProductItem";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getProductsList } from "../redux/products/productsActions";
+import HomePageStyled from "./HomeStyled";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -13,17 +14,17 @@ const Home = () => {
     dispatch(getProductsList());
     //eslint-disable-next-line
   }, []);
-  
+
   return (
     <>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      <div className='container'>
-        <ul className="product-list">
+      <div className="container">
+        <HomePageStyled>
           {products?.map((item) => (
             <ProductItem key={item._id} item={item} />
           ))}
-        </ul>
+        </HomePageStyled>
       </div>
     </>
   );
