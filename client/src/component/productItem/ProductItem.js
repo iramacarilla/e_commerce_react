@@ -5,7 +5,7 @@ import ProductItemStyled from "./ProductItemStyled";
 const ProductItem = ({ item }) => {
   return (
     <ProductItemStyled>
-      <Link to={"/product/" + item._id}>
+      <Link className="product-item__link" to={"/product/" + item._id}>
         {" "}
         <img className="product-item__img" alt="product" src={item.image} />
       </Link>

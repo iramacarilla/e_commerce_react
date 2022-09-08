@@ -6,6 +6,7 @@ import {
   PRODUCT_DETAILS_FAILURE,
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
+  PRODUCT_FILTER_SUCCESS,
 } from "./productsActionsTypes";
 
 //const api = "http://localhost:5000";
@@ -29,4 +30,8 @@ export const getProductDetails = (productID) => async (dispatch) => {
   } catch (error) {
     dispatch({ type: PRODUCT_DETAILS_FAILURE, payload: error.message });
   }
+};
+export const getFilter = (num) => async (dispatch) => {
+  dispatch({ type: PRODUCT_FILTER_SUCCESS, payload: num });
+  const { data } = await axios.get(api + "/api/products");
 };

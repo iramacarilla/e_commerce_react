@@ -5,6 +5,7 @@ import {
   PRODUCT_DETAILS_FAILURE,
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
+  PRODUCT_FILTER_SUCCESS,
 } from "./productsActionsTypes";
 
 export const productsReducer = (state = { products: [] }, action) => {
@@ -15,6 +16,10 @@ export const productsReducer = (state = { products: [] }, action) => {
       return { loading: false, products: action.payload };
     case PRODUCTS_LIST_FAILURE:
       return { loading: false, error: action.payload };
+    case PRODUCT_FILTER_SUCCESS:
+      return {
+        products: state.products.filter((item) => item.price < action.payload),
+      };
     default:
       return state;
   }

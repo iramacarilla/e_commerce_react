@@ -3,6 +3,7 @@ import ProductItem from "../component/productItem/ProductItem";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getProductsList } from "../redux/products/productsActions";
+import PriceFilter from "../component/filter/PriceFilter";
 //import HomePageStyled from "./HomeStyled";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
     <>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
+      <PriceFilter products={products} />
       <div className="container">
         <ul className="product-list">
           {products?.map((item) => (
